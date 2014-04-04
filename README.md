@@ -41,8 +41,8 @@ PaymillApp = new PaymillApp(this, ApplicationData.CLIENT_ID,
 				ApplicationData.SECRET_KEY, ApplicationData.CALLBACK_URL);
 
 mPaymillButton = (PaymillButton) findViewById(R.id.btnPaymillConnect);
-		mStripeButton.setPaymillApp(mApp);
-		mStripeButton.addPaymillConnectListener(new PaymillConnectListener() {
+		mPaymillButton.setPaymillApp(mApp);
+		mPaymillButton.addPaymillConnectListener(new PaymillConnectListener() {
 
 			@Override
 			public void onConnected() {
@@ -65,7 +65,7 @@ mPaymillButton = (PaymillButton) findViewById(R.id.btnPaymillConnect);
 By default, when the Paymill Connect button is clicked, an Android Dialog will open and display the Paymill authentication page. If you would like to open an Activity instead of a Dialog, you can use **setConnectMode** to change such behavior.
 
 ```Java
-mPaymillButton = (PaymillButton) findViewById(R.id.btnStripeConnect);
+mPaymillButton = (PaymillButton) findViewById(R.id.btnPaymillConnect);
 mPaymillButton.setPaymillApp(mApp);
 mPaymillButton.setConnectMode(CONNECT_MODE.ACTIVITY);
 ```
