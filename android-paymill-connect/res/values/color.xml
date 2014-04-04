@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- <color name="paymill_btn_label_color">#FF3600</color> -->
+    <color name="paymill_btn_label_color">#FFF</color>
+</resources>
