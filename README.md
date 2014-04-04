@@ -5,8 +5,8 @@ Android Library for integrating with Paymill Connect using [Paymill Connect Oaut
 
 <center>
 ![Paymill Connect](https://github.com/thiagolocatelli/android-stripe-connect/raw/master/resources/screenshots/screenshot1.png "Paymill Connect")
-![Paymill Connect](https://github.com/thiagolocatelli/android-stripe-connect/raw/master/resources/screenshots/screenshot2.png "Paymill Connect")
-![Paymill Connect](https://github.com/thiagolocatelli/android-stripe-connect/raw/master/resources/screenshots/screenshot3.png "Paymill Connect")
+![Paymill Connect](https://github.com/thiagolocatelli/android-paymill-connect/raw/master/resources/screenshots/screenshot2.png "Paymill Connect")
+![Paymill Connect](https://github.com/thiagolocatelli/android-paymill-connect/raw/master/resources/screenshots/screenshot3.png "Paymill Connect")
 </center>
 
 
