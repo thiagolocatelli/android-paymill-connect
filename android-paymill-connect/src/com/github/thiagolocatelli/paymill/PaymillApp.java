@@ -12,8 +12,6 @@ import android.os.Handler;
 import android.os.Message;
 
 import com.github.thiagolocatelli.paymill.PaymillDialog.OAuthDialogListener;
-import com.stripe.Stripe;
-import com.stripe.model.Account;
 
 public class PaymillApp {
 	
@@ -21,7 +19,7 @@ public class PaymillApp {
 	
 	public static enum CONNECT_MODE { DIALOG, ACTIVITY }
 	
-	public static final int STRIPE_CONNECT_REQUEST_CODE = 123;
+	public static final int PAYMILL_CONNECT_REQUEST_CODE = 123;
 	public static final int RESULT_CONNECTED = 1;
 	public static final int RESULT_ERROR = 2;
 	
@@ -130,12 +128,7 @@ public class PaymillApp {
 
 				try {
 					
-					Stripe.apiKey = mSession.getAccessToken();
-					Account account = Account.retrieve();
 
-					if(account != null) {
-						
-					}
 					
 				} catch (Exception ex) {
 					what = ERROR;

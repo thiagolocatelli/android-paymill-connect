@@ -2,12 +2,12 @@
 <resources>
     
     <string name="app_name">android-paymill-connect</string>
-    <string name="btnConnectText">Connect with Paymill</string>
-    <string name="btnDisconnectText">Disconnect from Paymill</string>
+    <string name="btnPaymillConnectText">Connect with Paymill</string>
+    <string name="btnPaymillDisconnectText">Disconnect from Paymill</string>
     
-    <string name="btnDialogYes">Yes</string>
-    <string name="btnDialogNo">No</string>
+    <string name="btnPaymillDialogYes">Yes</string>
+    <string name="btnPaymillDialogNo">No</string>
     
-    <string name="dialogDisconnectText">Disconnect from Paymill?</string>
+    <string name="dialogPaymillDisconnectText">Disconnect from Paymill?</string>
     
 </resources>

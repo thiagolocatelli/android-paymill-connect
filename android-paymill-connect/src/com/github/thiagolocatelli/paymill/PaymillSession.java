@@ -18,7 +18,7 @@ public class PaymillSession {
 	private static final String API_LIVE_MODE = "live_mode";
 
 	public PaymillSession(Context context, String accountName) {
-		Log.i("StripeSession", "StripeSession[accountName]:					" + accountName);
+		Log.i("PaymillSession", "PaymillSession[accountName]:					" + accountName);
 		sharedPref = context.getSharedPreferences(accountName + SHARED, Context.MODE_PRIVATE);
 	}
 

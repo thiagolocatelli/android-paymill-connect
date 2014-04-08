@@ -48,7 +48,7 @@ public class PaymillButton extends Button {
 	private void setupButton() {
 		
 		if(mPaymillApp == null) {
-			setButtonText(R.string.btnConnectText);
+			setButtonText(R.string.btnPaymillConnectText);
 		}
 		
 		setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, 1f));
@@ -78,17 +78,17 @@ public class PaymillButton extends Button {
 					final AlertDialog.Builder builder = new AlertDialog.Builder(
 							mContext);
 					builder.setMessage(
-						getResources().getString(R.string.dialogDisconnectText))
+						getResources().getString(R.string.dialogPaymillDisconnectText))
 						.setCancelable(false)
-						.setPositiveButton(getResources().getString(R.string.btnDialogYes),
+						.setPositiveButton(getResources().getString(R.string.btnPaymillDialogYes),
 							new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog, int id) {
 									mPaymillApp.resetAccessToken();
-									setButtonText(R.string.btnConnectText);
+									setButtonText(R.string.btnPaymillConnectText);
 									mPaymillApp.getOAuthAuthenticationListener().onSuccess();
 								}
 							})
-						.setNegativeButton(getResources().getString(R.string.btnDialogNo),
+						.setNegativeButton(getResources().getString(R.string.btnPaymillDialogNo),
 							new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog, int id) {
 									dialog.cancel();
@@ -109,7 +109,7 @@ public class PaymillButton extends Button {
 						i.putExtra("tokenUrl", mPaymillApp.getTokenUrl());
 						i.putExtra("secretKey", mPaymillApp.getSecretKey());
 						i.putExtra("accountName", mPaymillApp.getAccountName());
-						parent.startActivityForResult(i, PaymillApp.STRIPE_CONNECT_REQUEST_CODE);
+						parent.startActivityForResult(i, PaymillApp.PAYMILL_CONNECT_REQUEST_CODE);
 					}
 				}
 				
@@ -140,10 +140,10 @@ public class PaymillButton extends Button {
 		mPaymillApp.setListener(getOAuthAuthenticationListener());
 		
 		if(mPaymillApp.isConnected()) {
-			setButtonText(R.string.btnDisconnectText);
+			setButtonText(R.string.btnPaymillDisconnectText);
 		}
 		else {
-			setButtonText(R.string.btnConnectText);
+			setButtonText(R.string.btnPaymillConnectText);
 		}
 	}
 	
@@ -169,14 +169,14 @@ public class PaymillButton extends Button {
 				if(mPaymillConnectListener != null) {
 					if(mPaymillApp.isConnected()) {
 						Log.d("PaymillButton", "Connected");
-						setButtonText(R.string.btnDisconnectText);
+						setButtonText(R.string.btnPaymillDisconnectText);
 						Log.d("PaymillButton", "Calling mStripeConnectListener.onConnected()");
 						mPaymillConnectListener.onConnected();
 					}
 					else {
 						Log.d("PaymillButton", "Disconnected");
 						Log.d("PaymillButton", "Calling mStripeConnectListener.onDisconnected()");
-						setButtonText(R.string.btnConnectText);
+						setButtonText(R.string.btnPaymillConnectText);
 						mPaymillConnectListener.onDisconnected();
 					}
 				}
